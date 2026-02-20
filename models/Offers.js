@@ -1,0 +1,17 @@
+// connexion BDD
+const mongoose = require("mongoose");
+
+// creation modele offer
+const Offer = mongoose.model("Offers", {
+  product_name: String,
+  product_description: String,
+  product_price: Number,
+  product_details: Array,
+  product_image: Object,
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+});
+
+module.exports = Offer;
