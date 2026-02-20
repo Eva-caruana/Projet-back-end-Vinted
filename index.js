@@ -4,6 +4,7 @@ require("dotenv").config();
 //Importations packages
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 //ajout middleware
 const isAuthenticated = require("./middleware/isAuthenticated");
@@ -22,6 +23,9 @@ cloudinary.config({
 const app = express();
 //connecter middleware pour faire apparaitre le body
 app.use(express.json());
+
+// securité
+app.use(cors());
 
 //connecter la BDD mongoose
 mongoose.connect("process.env.MONGODB_URI");
