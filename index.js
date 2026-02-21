@@ -14,9 +14,9 @@ const cloudinary = require("cloudinary").v2;
 
 // Connexion à mon compte cloudinary
 cloudinary.config({
-  cloud_name: "dyg3vgdgi",
-  api_key: "192767226297699",
-  api_secret: "zsnz5ve-Lsu7rB9wtXpUTTCn4c0",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 //Declarer express
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cors());
 
 //connecter la BDD mongoose
-mongoose.connect("process.env.MONGODB_URI");
+mongoose.connect(process.env.MONGODB_URI);
 
 //importations routes
 const userRoutes = require("./routes/user");
