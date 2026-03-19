@@ -12,8 +12,7 @@ const Filters = mongoose.model("Filters", {
  page: {
     Number,
     true
- 
-  },
+  };
 });
 
 module.exports = Offer;
