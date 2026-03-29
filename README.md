@@ -50,7 +50,7 @@ Make sure you have Node.js installed.
 ### Installation
 
 Clone the repository:
-git clone https://github.com/Eva-caruana/Projet-back-end-Vinted.git
+git clone https://github.com/Eva-caruana/Projet-back-end-Vinted.git  
 cd Projet-back-end-Vinted          
 
 Install dependecies:
