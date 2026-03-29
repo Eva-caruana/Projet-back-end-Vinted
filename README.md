@@ -6,7 +6,6 @@
 - About The Project  
 - Built With  
 - Getting Started  
-- Installation  
 - Usage  
 - Roadmap  
 - Disclaimer  
@@ -46,20 +45,21 @@ This project helped me understand how to design a complete backend for an e-comm
 
 ### Prerequisites
 
-Make sure you have the following installed:
-
-```bash
-npm install npm@latest -g
-```
+Make sure you have Node.js installed.
 
 ### Installation
 
 Clone the repository:
 git clone https://github.com/Eva-caruana/Projet-back-end-Vinted.git
+cd Projet-back-end-Vinted          
 
+Install dependecies:
+```bash
+npm install                       
+```
 Create a `.env` file with your environment variables (MongoDB, Cloudinary, etc.)
 
-start the server:
+Start the server:
 ```bash
 npm start
 ```
