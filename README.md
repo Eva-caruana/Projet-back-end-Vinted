@@ -57,6 +57,7 @@ npm install npm@latest -g
 Clone the repository:
 git clone https://github.com/Eva-caruana/Projet-back-end-Vinted.git
 
+Create a `.env` file with your environment variables (MongoDB, Cloudinary, etc.)
 
 start the server:
 ```bash
