@@ -65,7 +65,7 @@ npm start
 
 ---
 
-##Usage
+## Usage
 
 ### Authentication
 
@@ -74,7 +74,7 @@ npm start
 
 ### Offers
 
-- GET / → get all offers  
+- GET /offers → get all offers  
 - GET /offer/:id → get a specific offer  
 - POST /offer/publish → create a new offer  
 
@@ -107,7 +107,6 @@ Add favorites
 Add messaging system
 Seller rating system
 Mobile application
-Disclaimer
 
 ## Disclaimer 
 This project is an educational replica of the Vinted platform.
