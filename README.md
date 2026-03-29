@@ -56,7 +56,7 @@ npm install npm@latest -g
 
 Clone the repository:
 git clone https://github.com/Eva-caruana/Projet-back-end-Vinted.git
-cd Projet-back-end-Vinted
+
 
 start the server:
 ```bash
