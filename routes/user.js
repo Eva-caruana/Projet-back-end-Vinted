@@ -6,7 +6,6 @@ const encBase64 = require("crypto-js/enc-base64");
 
 // importation fichiers
 const User = require("../models/User");
-const Offer = require("../models/Offers");
 
 //declarer express
 const router = express.Router();
@@ -14,8 +13,6 @@ const router = express.Router();
 // POST creation de compte
 router.post("/user/signup", async (req, res) => {
   try {
-    // console.log("body => ", req.body);
-
     if (!req.body.email || !req.body.password || !req.body.username) {
       return res
         .status(400)
@@ -25,8 +22,6 @@ router.post("/user/signup", async (req, res) => {
     // Si en DB, j'ai déjà un User dont la clef email contient req.body.email => ERROR
 
     const userAlreadyExist = await User.findOne({ email: req.body.email });
-
-    // console.log("userAlreadyExist => ", userAlreadyExist);
 
     if (userAlreadyExist) {
       return res.status(409).json({ message: "This email is already used" });
@@ -62,17 +57,13 @@ router.post("/user/signup", async (req, res) => {
 // post = login user
 router.post("/user/login", async (req, res) => {
   try {
-    // console.log("body => ", req.body);
-
     const user = await User.findOne({ email: req.body.email });
-    // console.log("user => ", user);
 
     if (!user) {
       return res.status(401).json({ message: "Unauthorized" });
     }
 
     const newHash = SHA256(user.salt + req.body.password).toString(encBase64);
-    // console.log(user.hash === newHash);
 
     if (newHash !== user.hash) {
       return res.status(401).json({ message: "Unauthorized" });
